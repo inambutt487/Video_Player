@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/AppTheme"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?android:attr/colorForeground">
+
+    <VideoView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:id="@+id/videoView" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_marginLeft="17dp"
+        android:background="@drawable/brighticon"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="13dp"
+        android:id="@+id/button"
+        android:onClick="showSeekBar"
+        android:textColor="?attr/colorBackgroundFloating"
+        android:layout_height="30dp" />
+
+    </LinearLayout>
+
+
+    <com.jesusm.holocircleseekbar.lib.HoloCircleSeekBar
+        android:layout_centerInParent="true"
+        android:id="@+id/picker1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:max="80"
+        android:visibility="gone"
+        app:pointer_color="@color/point_color"
+        app:pointer_halo_color="@color/point_halo_color"
+        app:pointer_size="20dp"
+        app:text_color="@color/text_color"
+        app:text_size="30sp"
+        app:wheel_active_color="@color/wheel_active_color"
+        app:wheel_unactive_color="@color/wheel_unactive_color"/>
+
+    <com.jesusm.holocircleseekbar.lib.HoloCircleSeekBar
+        android:layout_centerInParent="true"
+        android:id="@+id/picker2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        app:max="84"
+        app:pointer_color="@color/point_color"
+        app:pointer_halo_color="@color/point_halo_color"
+        app:pointer_size="20dp"
+        app:text_color="@color/text_color"
+        app:text_size="30sp"
+        app:wheel_active_color="@color/wheel_active_color"
+        app:wheel_unactive_color="@color/wheel_unactive_color"/>
+
+    <Button
+        android:text=""
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/speaker"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="13dp"
+        android:id="@+id/button2"
+        android:onClick="volumeControl" />
+
+    <Button
+        android:text=""
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rotateicon"
+        android:onClick="display"
+        android:id="@+id/screenrotat"
+        android:layout_marginRight="66dp"
+        android:layout_marginEnd="66dp"
+        android:layout_alignTop="@+id/button2"
+        android:layout_toLeftOf="@+id/button2"
+        android:layout_toStartOf="@+id/button2" />
+
+    <Button
+        android:text=""
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/share"
+        android:onClick="shareVideo"
+        android:id="@+id/shareUs"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_alignBottom="@+id/linearLayout"
+        android:layout_toRightOf="@+id/linearLayout"
+        android:layout_toEndOf="@+id/linearLayout" />
+
+</RelativeLayout>
